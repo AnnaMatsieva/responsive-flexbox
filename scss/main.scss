@@ -37,7 +37,7 @@ a {
 p {
   margin: 0;
   color: #999999;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 img {
@@ -52,7 +52,7 @@ figure {
 }
 
 h2 {
-	font-size: 1.5rem;
+	font-size: 24px;
 	color: #414141;
 	padding: 30px 0 25px;
 }
@@ -60,7 +60,7 @@ h2 {
 h3 {
 	font-weight: bold;
 	color: #544f4d;
-	font-size: 1rem;
+	font-size: 16px;
 }
 
 .hide {
@@ -184,7 +184,7 @@ h3 {
 }
 
 .second-header {
-	padding: 20px 0;
+	padding: 23px 0;
 
 	.dropdown::after {
 		position: absolute;
@@ -194,6 +194,10 @@ h3 {
 		height: 8px;
 		background-position: 0 -63px;
 	}
+}
+
+#dropdown-menu {
+	display: none;
 }
 
 .main-menu {
@@ -295,7 +299,7 @@ main {
 
 .slick-dots li button::before {
 	content: "";
-	border: solid 1px #867a76;
+	border: none;
 	border-radius: 50%;
 	background: #867a76;
 	width: 10px;
@@ -303,16 +307,33 @@ main {
 	opacity: 1;
 }
 
-.slick-active button::before {
-	border-color: $mainColor !important;
+.slick-active li button::before {
+	border: none;
 	background: $mainColor !important;
+}
+
+.plus {
+	width: 30px;
+    height: 29px;
+    font-size: 28px;
+    position: relative;
+    left: -30px;
+    top: 6px;
+    padding: 0;
 }
 
 .update-email-social {
 	background: #ededed;
-	margin-bottom: 35px;
-	margin-top: 70px;
-	padding: 20px 0;
+	margin-bottom: 40px;
+	margin-top: 75px;
+	padding: 10px 0;
+
+	.email {
+
+		input {
+			padding: 5px;
+		}
+	}
 
 	p {
 		float: left;
@@ -353,21 +374,22 @@ main {
 	margin-bottom: 45px;
 }
 
-.clothes-model {
-	background: $mainColor;
-	padding: 0 0 20px;
+.mob-tabs-menu {
+	display: none;
 }
 
-.tabs-menu {
+.tabs-menu,
+.mob-tabs-menu {
 	background: #fff;
+
+	a {color: #fff;}
 
 	li {
 		display: inline-block;
 		text-transform: uppercase;
 		padding: 15px 20px;
-		cursor: pointer;
 
-		&:hover {
+		a:hover {
 			background: $mainColor;
 			color: #fff;
 		}
@@ -378,17 +400,35 @@ main {
 		background: $mainColor;
 		color: #fff;
 	}
-}
 
-.b-tab {
-	.slider-model {
-		margin-top: 30px;
+	.prev,
+	.next {
+		float: right;
+		background: #f2f2f2;
+		height: 18px;
+    	width: 7px;
 	}
 }
 
-.goods-name {} 
-.goods-price {}
-.goods-button {}
+.b-tab {
+	background: $mainColor;
+	padding: 25px 0;
+
+	button {
+		padding: 10px 15px;
+	}
+}
+
+.goods-name {
+	color: #373737;
+	font-size: 12px;
+	text-transform: uppercase;
+} 
+
+.goods-price {
+	font-size: 22px;
+	margin: 10px 0;
+}
 
 .b-model {
 	display: flex;
@@ -402,7 +442,7 @@ main {
 	}
 
 	figcaption {
-		height: 105px;
+		padding: 10px 0;
 	}
 
 	li {
@@ -427,10 +467,6 @@ main {
 	margin: 25px 0;
 }
 
-.sales-clothes {
-	
-}
-
 .brands {
 	margin-top: 55px;/**/
 	ul {
@@ -438,8 +474,12 @@ main {
 		overflow: hidden;
 	}
 
-	li {
-		display: inline-block;
+	h2 {
+		color: #414141;
+		font-size: 15px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
 	}
 
 	a {
@@ -448,7 +488,7 @@ main {
 		&::before {
 			content: "";
 			background: url("../img/brand.png") no-repeat;
-			width: 150px;
+			width: 115px;
 			height: 60px;
 			display: block;
 		}
@@ -472,6 +512,7 @@ main {
 
 	.calvin-klein a::before {
 		background-position: 0px -350px;
+		width: 125px;
 	}
 
 	.edwin a::before {
@@ -480,6 +521,7 @@ main {
 
 	.grenson a::before {
 		background-position: 0px -490px;
+		width: 150px;
 	}
 
 }
@@ -506,6 +548,28 @@ footer {
 	margin-top: 40px;
 }
 
+.footer-sale {
+	background: url("../img/footer-sale.png") no-repeat;
+	width: 107px;
+	height: 107px;
+	position: relative;
+
+	.sale {
+		position: absolute;
+		top: 25px;
+    	left: 17px;
+
+		p {
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+
+		.percent {
+			font-size: 30px;
+		}
+	}
+}
+
 .footer-links {
 	background: #ededed;
 	padding: 30px 0;
@@ -515,7 +579,7 @@ footer {
 	}
 
 	li {
-		font-size: 0.75rem;
+		font-size: 11px;
 		padding: 2px 0;
 	}
 }
@@ -563,7 +627,27 @@ footer {
 }
 
 .footer-menu {
-	height: 75px;
+	padding: 20px 0;
+	font-size: 11px;
+
+	.copy {
+		text-align: right;
+	}
+
+	p {
+		font-size: 11px;
+	}
+
+	li {
+		display: inline-block;
+
+		&::after {
+			content: "|";
+			margin: 0 5px;
+		}
+
+		&:last-child::after {content: "";}
+	}
 }
 
 .pay-card {
@@ -634,15 +718,38 @@ footer {
 
 .special-flex {
 	display: flex;
-	align-self: baseline;
+	align-self: flex-start;
 
 	div {
 		margin-right: 40px;
+
+		&:last-child {margin-right: 0;}
 	}
+
 }
 
 @media screen and (max-width: 748px) {
-	/**/
+
+	.wrap-center {
+		margin: 0 15px;
+	}
+
+	.main-menu {
+		display: none;
+	}
+
+	#dropdown-menu {
+		display: block;
+		background: $mainColor;
+		padding: 15px;
+
+		a {
+			text-transform: uppercase;
+			font-size: 30px;
+			color: #fff;
+		}
+	}
+
     .flex-row-column {
     	flex-direction: column;
     }
@@ -662,6 +769,10 @@ footer {
 
     .second-header .right {
     	align-self: flex-end;
+    }
+
+    .form-cart {
+    	margin-top: -35px;
     }
 
     .main-menu {
@@ -686,9 +797,71 @@ footer {
 }
 
 @media screen and (max-width: 640px) {
-/**/
+	.first-header p,
+	.first-header a,
+	.first-header li,
+	.first-header select {
+		font-size: 30px;
+	}
+
+	#dropdown-menu {
+		padding: 30px;
+	}
+
+	.mob-tabs-menu {
+		display: block;
+
+		.submenu {
+			display: none;
+			position: absolute;
+			left: 0;
+			background: $mainColor;
+			z-index: 1;
+			width: 100%;
+
+			li {
+				padding: 10px 20px;
+				width: 100%;
+			}
+		}
+
+		li:hover .submenu {
+			display: block;
+		}
+	}
+
+	.second-header {
+		margin: 0 15px;
+		.logo {
+			align-self: center;
+		}
+		.right {
+	   		align-self: center;
+
+		    .dropdown::after {
+		    	background: none;
+		    }
+		}
+	}
+
+	.form-cart {
+		margin: 70px 0 25px;
+		width: 100%;
+	}
+
+	.wrap-center {
+		margin: 0 auto;
+	}
+
 	.mob-row-column {
 		flex-direction: column;
+		align-items: inherit;
+	}
+
+	.mob-3-col {
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
 	}
 
 	.first-header {
@@ -702,6 +875,15 @@ footer {
 		}
 	}
 
+	.update-email-social {
+		background: none;
+		margin: 0 15px;
+
+		ul {
+			float: none;
+		}
+	}
+
 	.b-model {
 		img {width: 275px;}
 	}
@@ -710,13 +892,10 @@ footer {
 	.best-outfit,
 	.pay-card,
 	.brands,
-	.about-shop {
+	.about-shop,
+	.tabs-menu,
+	.your-cart,
+	.email-text {
 		display: none;
-	}
-
-	.left,
-	.center,
-	.right {
-		width: 100%;
 	}
 }
