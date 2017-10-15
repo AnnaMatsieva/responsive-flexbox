@@ -58,7 +58,6 @@ h3 {
   max-width: 970px;
   margin: 0 auto; }
 
-/**/
 .flex {
   display: flex;
   justify-content: space-between;
@@ -245,17 +244,18 @@ main {
   height: 10px;
   opacity: 1; }
 
-.slick-active li button::before {
+.slick-active button::before {
   border: none;
-  background: #fd926d !important; }
+  background: #fd926d !important;
+  /**/ }
 
 .plus {
   width: 30px;
   height: 29px;
   font-size: 28px;
-  position: relative;
-  left: -30px;
-  top: 6px;
+  position: absolute;
+  right: 0;
+  top: 0px;
   padding: 0; }
 
 .update-email-social {
@@ -263,8 +263,10 @@ main {
   margin-bottom: 40px;
   margin-top: 75px;
   padding: 10px 0; }
-  .update-email-social .email input {
-    padding: 5px; }
+  .update-email-social .email {
+    position: relative; }
+    .update-email-social .email input {
+      padding: 5px; }
   .update-email-social p {
     float: left; }
   .update-email-social a {
@@ -286,7 +288,6 @@ main {
   .update-email-social .p a::after {
     background-position: -86px 0; }
 
-/**/
 .best-outfit {
   margin-bottom: 45px; }
 
@@ -298,20 +299,18 @@ main {
   background: #fff; }
   .tabs-menu a,
   .mob-tabs-menu a {
-    color: #fff; }
+    color: #555555; }
   .tabs-menu li,
   .mob-tabs-menu li {
     display: inline-block;
     text-transform: uppercase;
     padding: 15px 20px; }
-    .tabs-menu li a:hover,
-    .mob-tabs-menu li a:hover {
-      background: #fd926d;
-      color: #fff; }
-  .tabs-menu .active,
-  .mob-tabs-menu .active {
-    background: #fd926d;
-    color: #fff; }
+    .tabs-menu li:hover,
+    .mob-tabs-menu li:hover {
+      background: #fd926d; }
+      .tabs-menu li:hover a,
+      .mob-tabs-menu li:hover a {
+        color: #fff; }
   .tabs-menu .prev,
   .tabs-menu .next,
   .mob-tabs-menu .prev,
@@ -320,6 +319,20 @@ main {
     background: #f2f2f2;
     height: 18px;
     width: 7px; }
+    .tabs-menu .prev:hover, .tabs-menu .prev:focus,
+    .tabs-menu .next:hover,
+    .tabs-menu .next:focus,
+    .mob-tabs-menu .prev:hover,
+    .mob-tabs-menu .prev:focus,
+    .mob-tabs-menu .next:hover,
+    .mob-tabs-menu .next:focus {
+      background: #fd926d; }
+  .tabs-menu .active,
+  .mob-tabs-menu .active {
+    background: #fd926d; }
+    .tabs-menu .active a,
+    .mob-tabs-menu .active a {
+      color: #fff; }
 
 .b-tab {
   background: #fd926d;
@@ -362,8 +375,7 @@ main {
   margin: 25px 0; }
 
 .brands {
-  margin-top: 55px;
-  /**/ }
+  margin-top: 55px; }
   .brands ul {
     display: flex;
     overflow: hidden; }
@@ -487,6 +499,8 @@ a::after {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .pay-card p {
+    margin: -5px 10px 0; }
   .pay-card li {
     display: inline-block; }
   .pay-card a {
@@ -495,7 +509,7 @@ a::after {
       content: "";
       background: url("../img/pay-card.png") no-repeat;
       width: 35px;
-      height: 25px;
+      height: 23px;
       display: block; }
   .pay-card .master-card a::before {
     background-position: -44px 0px; }
@@ -537,7 +551,7 @@ a::after {
     padding: 15px; }
     #dropdown-menu a {
       text-transform: uppercase;
-      font-size: 30px;
+      font-size: 18px;
       color: #fff; }
   .flex-row-column {
     flex-direction: column; }
@@ -551,7 +565,7 @@ a::after {
   .second-header .right {
     align-self: flex-end; }
   .form-cart {
-    margin-top: -35px; }
+    margin: -35px 0 30px 0; }
   .main-menu {
     text-align: center;
     background: #fd926d; }
@@ -561,10 +575,7 @@ a::after {
     display: inline-block;
     margin-right: 0; }
     .special-flex div {
-      margin-bottom: 40px; }
-  .align-start {
-    align-self: flex-start; }
-  /**/ }
+      margin-bottom: 40px; } }
 
 @media screen and (max-width: 640px) {
   .first-header p,
@@ -572,8 +583,31 @@ a::after {
   .first-header li,
   .first-header select {
     font-size: 30px; }
+  .logo {
+    background: url(../img/logo1.png) no-repeat;
+    width: 360px;
+    height: 90px;
+    margin: 30px auto 0; }
+  .update-email-social .email input {
+    padding: 30px;
+    font-size: 30px;
+    background: #ededed;
+    border: none;
+    width: 90%; }
+  .plus {
+    width: 95px;
+    height: 95px; }
+  .account-search {
+    padding: 30px 0; }
   #dropdown-menu {
     padding: 30px; }
+    #dropdown-menu a {
+      font-size: 30px; }
+  .form-cart .active {
+    padding: 20px 10px; }
+    .form-cart .active p {
+      font-size: 30px;
+      text-transform: uppercase; }
   .mob-tabs-menu {
     display: block; }
     .mob-tabs-menu .submenu {

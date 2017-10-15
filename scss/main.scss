@@ -71,7 +71,6 @@ h3 {
 	max-width: 970px;
     margin: 0 auto;
 }
-/**/
 
 .flex {
 	display: flex; 
@@ -98,6 +97,7 @@ h3 {
 		font-size: 11px;
 		text-transform: uppercase;
 	}
+
 	li {
 		border-left: solid 1px #666666;
 		box-sizing: border-box;
@@ -114,7 +114,9 @@ h3 {
 	    option {
 	    	background: #fff;
 	    }
+
 	}
+
 }
 
 .search a::after {
@@ -179,6 +181,7 @@ h3 {
     	p {
     		float: right;
     	}
+
     }
 
 }
@@ -194,6 +197,7 @@ h3 {
 		height: 8px;
 		background-position: 0 -63px;
 	}
+
 }
 
 #dropdown-menu {
@@ -202,11 +206,16 @@ h3 {
 
 .main-menu {
 	position: relative;
+
 	li {
 		margin-right: 30px;
 		position: relative;
-		&:last-child {margin-right: 0;}
+		
+		&:last-child {
+			margin-right: 0;
+		}
 	}
+
 	.submenu {
 		display: none;
 		position: absolute;
@@ -222,6 +231,7 @@ h3 {
 	li:hover .submenu {
 		display: block;
 	}
+
 }
 
 .main-menu .dropdown::after {
@@ -255,6 +265,7 @@ main {
 	    z-index: 1;
 	    padding: 20px 40px;
 	}
+
 }
 
 .slick-next,
@@ -307,18 +318,18 @@ main {
 	opacity: 1;
 }
 
-.slick-active li button::before {
+.slick-active button::before {
 	border: none;
-	background: $mainColor !important;
+	background: $mainColor !important; /**/
 }
 
 .plus {
 	width: 30px;
     height: 29px;
     font-size: 28px;
-    position: relative;
-    left: -30px;
-    top: 6px;
+    position: absolute;
+    right: 0;
+    top: 0px;
     padding: 0;
 }
 
@@ -329,10 +340,12 @@ main {
 	padding: 10px 0;
 
 	.email {
+		position: relative;
 
 		input {
 			padding: 5px;
 		}
+
 	}
 
 	p {
@@ -343,7 +356,9 @@ main {
 		display: block;
 	}
 
-	ul {float: right;}
+	ul {
+		float: right;
+	}
 
 	li {
 		display: inline-block;
@@ -357,6 +372,7 @@ main {
 			position: relative;
     		margin-top: -10px;
 		}
+
 	}
 
 	.twetter a::after {
@@ -368,7 +384,6 @@ main {
 	}
 
 }
-/**/
 
 .best-outfit {
 	margin-bottom: 45px;
@@ -382,23 +397,24 @@ main {
 .mob-tabs-menu {
 	background: #fff;
 
-	a {color: #fff;}
+	a {
+		color: #555555;
+	}
 
 	li {
 		display: inline-block;
 		text-transform: uppercase;
 		padding: 15px 20px;
 
-		a:hover {
+		&:hover {
 			background: $mainColor;
-			color: #fff;
+			
+			a {
+				color: #fff;
+			}
+
 		}
 
-	}
-
-	.active {
-		background: $mainColor;
-		color: #fff;
 	}
 
 	.prev,
@@ -407,7 +423,21 @@ main {
 		background: #f2f2f2;
 		height: 18px;
     	width: 7px;
+
+    	&:hover,
+    	&:focus {
+    		background: $mainColor;
+    	}
 	}
+
+	.active {
+		background: $mainColor;
+		a {
+			color: #fff;
+		}
+
+	}
+
 }
 
 .b-tab {
@@ -417,6 +447,7 @@ main {
 	button {
 		padding: 10px 15px;
 	}
+
 }
 
 .goods-name {
@@ -468,7 +499,8 @@ main {
 }
 
 .brands {
-	margin-top: 55px;/**/
+	margin-top: 55px;
+
 	ul {
 		display: flex;
 		overflow: hidden;
@@ -492,6 +524,7 @@ main {
 			height: 60px;
 			display: block;
 		}
+
 	}
 
 	.abandon a::before {
@@ -567,7 +600,9 @@ footer {
 		.percent {
 			font-size: 30px;
 		}
+
 	}
+
 }
 
 .footer-links {
@@ -646,8 +681,12 @@ footer {
 			margin: 0 5px;
 		}
 
-		&:last-child::after {content: "";}
+		&:last-child::after {
+			content: "";
+		}
+
 	}
+
 }
 
 .pay-card {
@@ -656,6 +695,10 @@ footer {
 	display: flex;
 	align-items: center;
     justify-content: center;
+
+    p {
+    	margin: -5px 10px 0;
+    }
 
 	li {
 		display: inline-block;
@@ -668,7 +711,7 @@ footer {
 			content: "";
 			background: url("../img/pay-card.png") no-repeat;
 			width: 35px;
-			height: 25px;
+			height: 23px;
 			display: block;
 		}
 
@@ -745,7 +788,7 @@ footer {
 
 		a {
 			text-transform: uppercase;
-			font-size: 30px;
+			font-size: 18px;
 			color: #fff;
 		}
 	}
@@ -772,7 +815,7 @@ footer {
     }
 
     .form-cart {
-    	margin-top: -35px;
+    	margin: -35px 0 30px 0;
     }
 
     .main-menu {
@@ -787,13 +830,13 @@ footer {
     .special-flex {
     	display: inline-block;
     	margin-right: 0;
+
     	div {
     		margin-bottom: 40px;
     	}
+
     }
 
-    .align-start {align-self: flex-start;}
-/**/
 }
 
 @media screen and (max-width: 640px) {
@@ -804,8 +847,46 @@ footer {
 		font-size: 30px;
 	}
 
+	.logo {
+		background: url(../img/logo1.png) no-repeat;
+	    width: 360px;
+	    height: 90px;	
+	    margin: 30px auto 0;
+	}
+
+	.update-email-social .email input {
+		padding: 30px;
+		font-size: 30px;
+		background: #ededed;
+		border: none;
+		width: 90%;
+	}
+
+	.plus {
+		width: 95px;
+		height: 95px;
+	}
+
+	.account-search {
+		padding: 30px 0;
+	}
+
 	#dropdown-menu {
 		padding: 30px;
+
+		a {
+			font-size: 30px;
+		}
+	}
+
+	.form-cart .active {
+		padding: 20px 10px;
+
+		p {
+			font-size: 30px;
+			text-transform: uppercase;
+		}
+
 	}
 
 	.mob-tabs-menu {
@@ -823,6 +904,7 @@ footer {
 				padding: 10px 20px;
 				width: 100%;
 			}
+
 		}
 
 		li:hover .submenu {
@@ -832,16 +914,20 @@ footer {
 
 	.second-header {
 		margin: 0 15px;
+
 		.logo {
 			align-self: center;
 		}
+
 		.right {
 	   		align-self: center;
 
 		    .dropdown::after {
 		    	background: none;
 		    }
+
 		}
+
 	}
 
 	.form-cart {
@@ -873,6 +959,7 @@ footer {
 			padding: 35px 0;
 			text-align: center;
 		}
+
 	}
 
 	.update-email-social {
@@ -882,10 +969,13 @@ footer {
 		ul {
 			float: none;
 		}
+
 	}
 
 	.b-model {
-		img {width: 275px;}
+		img {
+			width: 275px;
+		}
 	}
 
 	.slider,
@@ -898,4 +988,5 @@ footer {
 	.email-text {
 		display: none;
 	}
+
 }
