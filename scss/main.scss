@@ -1,0 +1,722 @@
+$mainColor: #fd926d;
+
+html,
+body {
+  height: 100%;
+  margin: 0 auto;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  font-weight: 100;
+  font-size: 100%;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  font-size: 16px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #848484;
+}
+
+p {
+  margin: 0;
+  color: #999999;
+  font-size: 0.875rem;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+figure {
+  margin: 0;
+}
+
+h2 {
+	font-size: 1.5rem;
+	color: #414141;
+	padding: 30px 0 25px;
+}
+
+h3 {
+	font-weight: bold;
+	color: #544f4d;
+	font-size: 1rem;
+}
+
+.hide {
+	display: none;
+}
+
+.wrap-center {
+	max-width: 970px;
+    margin: 0 auto;
+}
+/**/
+
+.flex {
+	display: flex; 
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-column{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*---header---*/
+.first-header {
+	background: #000;
+	padding: 5px 0;
+
+	p,
+	li,
+	a {
+		color: #fff;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+	li {
+		border-left: solid 1px #666666;
+		box-sizing: border-box;
+		padding: 0 15px;
+		display: inline-block;
+	}
+
+	select {
+		border: none;
+	    background: #000;
+	    color: #fff;
+	    cursor: pointer;
+
+	    option {
+	    	background: #fff;
+	    }
+	}
+}
+
+.search a::after {
+	content: "";
+	background: url("../img/icons.png") no-repeat;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	position: relative;
+    top: 3px;
+}
+
+
+.my-account a::before {
+	content: "";
+	background: url("../img/icons.png") no-repeat;
+	width: 22px;
+	height: 18px;
+	display: inline-block;
+	background-position: 0 -44px;
+    position: relative;
+    top: 4px;
+}
+
+.cart::before {
+	content: "";
+	background: url("../img/icons.png") no-repeat;
+	width: 30px;
+	height: 19px;
+	display: block;
+	background-position: 0 -23px;
+	float: left;
+}
+
+.dropdown::after {
+    content: "";
+	background: url("../img/icons.png") no-repeat;
+	display: block;
+	cursor: pointer;
+}
+
+.form-cart {
+	position: relative;
+	width: 210px;
+
+	input {
+	    border: solid 1px #d6d6d6;
+	    padding: 5px 10px;
+	    width: 188px;
+	}
+
+	.cart {
+		display: none;
+	}
+
+    .active {
+    	display: block;
+    	border: solid 1px #d6d6d6;
+    	padding: 5px 10px;
+    	background: #fafafa;
+    	overflow: hidden;
+    	p {
+    		float: right;
+    	}
+    }
+
+}
+
+.second-header {
+	padding: 20px 0;
+
+	.dropdown::after {
+		position: absolute;
+		top: 8px;
+		right: 5px;
+		width: 8px;
+		height: 8px;
+		background-position: 0 -63px;
+	}
+}
+
+.main-menu {
+	position: relative;
+	li {
+		margin-right: 30px;
+		position: relative;
+		&:last-child {margin-right: 0;}
+	}
+	.submenu {
+		display: none;
+		position: absolute;
+		background: #fff;
+		z-index: 1;
+
+		li {
+			padding: 10px 0;
+			width: 100%;
+		}
+	}
+
+	li:hover .submenu {
+		display: block;
+	}
+}
+
+.main-menu .dropdown::after {
+    width: 8px;
+    height: 9px;
+    position: absolute;
+    right: -10px;
+    top: 3px;
+    background-position: -10px -62px; 
+}
+
+.logo {
+	background: url("../img/logo.png") no-repeat;
+    width: 120px;
+    display: block;
+    height: 28px;
+}
+
+/*----main-----*/
+main {
+  flex: 1 0 auto;
+}
+
+.slick-slide {
+	position: relative;
+
+	button {
+		position: absolute;
+		bottom: 17%;
+	    left: 23%;
+	    z-index: 1;
+	    padding: 20px 40px;
+	}
+}
+
+.slick-next,
+.slick-prev {
+	z-index: 1;
+	background: #fdfcfb;
+	width: 30px;
+	height: 115px;
+}
+
+.slick-next::before,
+.slick-prev::before {
+	content: url('../img/arrow.png');
+	width: 12px;
+	height: 18px;
+	display: block;
+	margin: auto;
+}
+
+.slick-prev::before {
+	transform: rotate(180deg);
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+	background: #fdfcfb;
+}
+
+.slick-next {
+	right: 0;
+}
+
+.slick-prev {
+	left: 0;
+}
+
+.slick-dots {
+	bottom: -50px;
+}
+
+.slick-dots li button::before {
+	content: "";
+	border: solid 1px #867a76;
+	border-radius: 50%;
+	background: #867a76;
+	width: 10px;
+	height: 10px;
+	opacity: 1;
+}
+
+.slick-active button::before {
+	border-color: $mainColor !important;
+	background: $mainColor !important;
+}
+
+.update-email-social {
+	background: #ededed;
+	margin-bottom: 35px;
+	margin-top: 70px;
+	padding: 20px 0;
+
+	p {
+		float: left;
+	}
+
+	a {
+		display: block;
+	}
+
+	ul {float: right;}
+
+	li {
+		display: inline-block;
+
+		a::after {
+			content: "";
+			background: url("../img/social.png") no-repeat;
+			display: block;
+			width: 25px;
+			height: 30px;
+			position: relative;
+    		margin-top: -10px;
+		}
+	}
+
+	.twetter a::after {
+		background-position: -43px 0;
+	}
+
+	.p a::after {
+		background-position: -86px 0;
+	}
+
+}
+/**/
+
+.best-outfit {
+	margin-bottom: 45px;
+}
+
+.clothes-model {
+	background: $mainColor;
+	padding: 0 0 20px;
+}
+
+.tabs-menu {
+	background: #fff;
+
+	li {
+		display: inline-block;
+		text-transform: uppercase;
+		padding: 15px 20px;
+		cursor: pointer;
+
+		&:hover {
+			background: $mainColor;
+			color: #fff;
+		}
+
+	}
+
+	.active {
+		background: $mainColor;
+		color: #fff;
+	}
+}
+
+.b-tab {
+	.slider-model {
+		margin-top: 30px;
+	}
+}
+
+.goods-name {} 
+.goods-price {}
+.goods-button {}
+
+.b-model {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	overflow: hidden;
+
+	img {
+		width: 220px;
+	}
+
+	figcaption {
+		height: 105px;
+	}
+
+	li {
+		background: #f7f7f7;
+		margin-right: 30px;
+	}
+}
+
+.border-line .left,
+.border-line .right {
+	border-top: solid 1px #d8d8d8;
+	width: 40%;
+}
+
+.border-line {
+	p {
+		text-align: center;
+	}
+}
+
+.circle img {
+	margin: 25px 0;
+}
+
+.sales-clothes {
+	
+}
+
+.brands {
+	margin-top: 55px;/**/
+	ul {
+		display: flex;
+		overflow: hidden;
+	}
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+
+		&::before {
+			content: "";
+			background: url("../img/brand.png") no-repeat;
+			width: 150px;
+			height: 60px;
+			display: block;
+		}
+	}
+
+	.abandon a::before {
+		background-position: 0px -70px;
+	}
+
+	.adidas a::before {
+		background-position: 0px -140px;
+	}
+
+	.boy-london a::before {
+		background-position: 0px -210px;
+	}
+
+	.converse a::before {
+		background-position: 0px -280px;
+	}
+
+	.calvin-klein a::before {
+		background-position: 0px -350px;
+	}
+
+	.edwin a::before {
+		background-position: 0px -420px;
+	}
+
+	.grenson a::before {
+		background-position: 0px -490px;
+	}
+
+}
+
+.about-shop {
+	text-align: center;
+	margin-top: 40px;
+}
+
+button {
+	background: $mainColor;
+	border: none;
+    padding: 10px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/*--------footer----*/
+footer {
+	background: #000;
+	color: #bfbfbf;
+	flex: 0 0 auto;
+	margin-top: 40px;
+}
+
+.footer-links {
+	background: #ededed;
+	padding: 30px 0;
+
+	ul {
+		margin-top: 15px;
+	}
+
+	li {
+		font-size: 0.75rem;
+		padding: 2px 0;
+	}
+}
+
+.footer-social {
+	width: 125px;
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+	}
+
+	li a::after {
+		content: "";
+		background: url("../img/social.png") no-repeat;
+		width: 37px;
+	    height: 43px;
+	    display: inline-block;
+	    background-position: 0px -40px;
+	}
+
+	.p a::after {
+		background-position: -40px -40px;
+	}
+
+	.facebook  a::after {
+		background-position: -80px -40px;
+	}
+
+	.google  a::after {
+		background-position: -117px -40px;
+	}
+
+	.tweet 
+	 a::after {
+		background-position: -157px -40px;
+	}
+
+	.v  a::after {
+		background-position: -197px -40px;
+	}
+}
+
+.footer-menu {
+	height: 75px;
+}
+
+.pay-card {
+	background-color: #f7f7f7;
+	height: 60px;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+
+	li {
+		display: inline-block;
+	}
+
+	a {
+		display: block;
+
+		&::before {
+			content: "";
+			background: url("../img/pay-card.png") no-repeat;
+			width: 35px;
+			height: 25px;
+			display: block;
+		}
+
+	}
+
+	.master-card a::before {
+		background-position: -44px 0px;
+	}
+
+	.paypal a::before {
+		background-position: -88px 0px;
+	}
+
+	.express a::before {
+		background-position: -132px 0px;
+	}
+
+	.viza-electrons a::before {
+		background-position: -176px 0px;
+	}
+
+	.laser a::before {
+		background-position: -220px 0px;
+	}
+
+	.maestro a::before {
+		background-position: -264px 0px;
+	}
+
+	.delta a::before {
+		background-position: -308px 0px;
+	}
+
+	.s-card a::before {
+		background-position: -352px 0px;
+	}
+
+	.id-card a::before {
+		background-position: -397px 0px;
+	}
+
+	.dk-card a::before {
+		background-position: -442px 0px;
+	}
+
+}
+
+.special-flex {
+	display: flex;
+	align-self: baseline;
+
+	div {
+		margin-right: 40px;
+	}
+}
+
+@media screen and (max-width: 748px) {
+	/**/
+    .flex-row-column {
+    	flex-direction: column;
+    }
+
+    .second-header .left {
+    	align-self: flex-start;
+    }
+
+    .second-header .center {
+    	order: 1;
+    	width: 100%;
+
+    	li {
+    		display: block;
+    	}
+    }
+
+    .second-header .right {
+    	align-self: flex-end;
+    }
+
+    .main-menu {
+    	text-align: center;
+    	background: $mainColor;
+    }
+
+    .b-model {
+    	justify-content: flex-start;
+    }
+
+    .special-flex {
+    	display: inline-block;
+    	margin-right: 0;
+    	div {
+    		margin-bottom: 40px;
+    	}
+    }
+
+    .align-start {align-self: flex-start;}
+/**/
+}
+
+@media screen and (max-width: 640px) {
+/**/
+	.mob-row-column {
+		flex-direction: column;
+	}
+
+	.first-header {
+		padding: 0;
+
+		 .left {
+			background: #fafafa;
+			color: #838383;
+			padding: 35px 0;
+			text-align: center;
+		}
+	}
+
+	.b-model {
+		img {width: 275px;}
+	}
+
+	.slider,
+	.best-outfit,
+	.pay-card,
+	.brands,
+	.about-shop {
+		display: none;
+	}
+
+	.left,
+	.center,
+	.right {
+		width: 100%;
+	}
+}
