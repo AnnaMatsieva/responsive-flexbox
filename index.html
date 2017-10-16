@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="./slick/slick.css" />
   		<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" />		
+		<link rel="stylesheet" type="text/css" href="css/main.css" />	
 	</head>
 	<body>
 		<header>
@@ -18,7 +18,7 @@
 						<li>
 							<select>
 								<option value="$US" selected>$US</option>
-								<option></option>
+								<option value="Rub">Rub</option>
 							</select>
 						</li>
 						<li class="my-account">
@@ -42,7 +42,7 @@
 				    	<div class="mob-menu">
 				    		<div class="flex">
 					    		<a href="">Menu</a>
-					    		<i class="fa fa-bars dropdown"></i>
+					    		<i class="fa fa-bars off-canvas"></i>
 					    	</div>
 					    	<ul class="mob-main-menu active">
 					            <li><a href="">new</a></li>
@@ -69,10 +69,12 @@
 				    </div>
 				    <div class="right form-cart">
 				    	<form class="dropdown">
-							<input class="your-cart" type="text" placeholder="Your cart">
-							<div class="active cart">
-								<i class="fa fa-shopping-bag"></i>
-								<p><span>0</span> items | $ <span>0</span></p>
+							<div class="your-cart">
+								<input type="text" placeholder="Your cart">
+								<div class="cart">
+									<i class="fa fa-shopping-bag"></i>
+									<p><span>0</span> items | $ <span>0</span></p>
+								</div>
 							</div>
 						</form>
 				    </div>
@@ -157,7 +159,7 @@
 			</div>
 			<div class="clothes-model">
 				<div class="tabs">
-					<ul class="mob-tabs-menu">
+					<ul class="mob-tabs-menu dropdown">
 						<li class="active"><a href="">What's Hot?</a>
 							<ul class="submenu">
 								<li><a href="">Designers</a></li>
@@ -178,9 +180,14 @@
 				    	<ul class="slider-model b-model">
 				    		<li>
 				    			<figure>
-					   				<img src="img/image.jpg">
+					   				<div class="model-img">
+					   					<img src="img/image.jpg">
+					   					<div class="shop-it">
+					   						<p>Shop it</p>
+					   					</div>
+					   				</div>
 					   				<figcaption class="flex-column">
-					   					<p class="goods-name">Petrol Sweater</p>
+					   					<a href="" class="goods-name">Petrol Sweater</a>
 					   					<p class="goods-price">$21.50</p>
 					   					<button class="goods-button">
 					   						Add to cart
@@ -191,9 +198,17 @@
 				    		</li>
 				    		<li>
 				    			<figure>
-					   				<img src="img/image.jpg">
+					   				<div class="model-img">
+					   					<img src="img/image.jpg">
+					   					<div class="shop-it">
+					   						<p>Shop it</p>
+					   					</div>
+					   					<div class="shop-sale">
+					   						<p>Sale</p>
+					   					</div>
+					   				</div>
 					   				<figcaption class="flex-column">
-					   					<p class="goods-name">Petrol Sweater</p>
+					   					<a href="" class="goods-name">Petrol Sweater</a>
 					   					<p class="goods-price">$21.50</p>
 					   					<button class="goods-button">
 					   						Add to cart
@@ -204,9 +219,14 @@
 				    		</li>
 				    		<li>
 				    			<figure>
-					   				<img src="img/image.jpg">
+					   				<div class="model-img">
+					   					<img src="img/image.jpg">
+					   					<div class="shop-it">
+					   						<p>Shop it</p>
+					   					</div>
+					   				</div>
 					   				<figcaption class="flex-column">
-					   					<p class="goods-name">Petrol Sweater</p>
+					   					<a href="" class="goods-name">Petrol Sweater</a>
 					   					<p class="goods-price">$21.50</p>
 					   					<button class="goods-button">
 					   						Add to cart
@@ -217,9 +237,17 @@
 				    		</li>
 				    		<li>
 				    			<figure>
-					   				<img src="img/image.jpg">
+					   				<div class="model-img">
+					   					<img src="img/image.jpg">
+					   					<div class="shop-it">
+					   						<p>Shop it</p>
+					   					</div>
+					   					<div class="shop-sale">
+					   						<p>Sale</p>
+					   					</div>
+					   				</div>
 					   				<figcaption class="flex-column">
-					   					<p class="goods-name">Petrol Sweater</p>
+					   					<a href="" class="goods-name">Petrol Sweater</a>
 					   					<p class="goods-price">$21.50</p>
 					   					<button class="goods-button">
 					   						Add to cart
@@ -230,9 +258,17 @@
 				    		</li>
 				    		<li>
 				    			<figure>
-					   				<img src="img/image.jpg">
+					   				<div class="model-img">
+					   					<img src="img/image.jpg">
+					   					<div class="shop-it">
+					   						<p>Shop it</p>
+					   					</div>
+					   					<div class="shop-sale">
+					   						<p>Sale</p>
+					   					</div>
+					   				</div>
 					   				<figcaption class="flex-column">
-					   					<p class="goods-name">Petrol Sweater</p>
+					   					<a href="" class="goods-name">Petrol Sweater</a>
 					   					<p class="goods-price">$21.50</p>
 					   					<button class="goods-button">
 					   						Add to cart
@@ -243,9 +279,17 @@
 				    		</li>
 				    		<li>
 				    			<figure>
-					   				<img src="img/image.jpg">
+					   				<div class="model-img">
+					   					<img src="img/image.jpg">
+					   					<div class="shop-it">
+					   						<p>Shop it</p>
+					   					</div>
+					   					<div class="shop-sale">
+					   						<p>Sale</p>
+					   					</div>
+					   				</div>
 					   				<figcaption class="flex-column">
-					   					<p class="goods-name">Petrol Sweater</p>
+					   					<a href="" class="goods-name">Petrol Sweater</a>
 					   					<p class="goods-price">$21.50</p>
 					   					<button class="goods-button">
 					   						Add to cart
@@ -261,63 +305,94 @@
 				    <div class="b-tab hide">Третье содержимое</div>      
 				</div>				
 			</div>			
-			<div class="wrap-center border-line flex">
-				<div class="left"></div>
-				<div class="circle"><img src="img/sale.png" /></div>
-				<div class="right"></div>
+			<div class="wrap-center border-line">
+				<div class="sale-percent">
+				<div class="flex">
+					<div class="line"></div>
+					<div class="line-border circle">
+						<img src="img/sale.png" />
+					</div>
+					<div class="line"></div>
+				</div>
+			</div>
 			</div>
 			<div class="clothes-model">
 				<div class="wrap-center">
 					<ul class="b-model">
 					    <li>
 					    	<figure>
-								<img src="img/image.jpg">
+								<div class="model-img">
+					   				<img src="img/image.jpg">
+					   				<div class="shop-it">
+					   					<p>Shop it</p>
+					   				</div>
+					   				<div class="shop-sale">
+					   					<p>Sale</p>
+					   				</div>
+					   			</div>
 								<figcaption class="flex-column">
-					   				<p class="goods-name">Petrol Sweater</p>
+					   				<a href="" class="goods-name">Petrol Sweater</a>
 					   				<p class="goods-price">$21.50</p>
-					   				<button class="goods-button">
-					   						Add to cart
-					   						<i class="fa fa-plus"></i>
-					   					</button>
+					   				<button class="goods-button">Add to cart
+					   					<i class="fa fa-plus"></i>
+					   				</button>
 					   			</figcaption>
 					    	</figure>
 					    </li>
 					    <li>
 					    	<figure>
-						    	<img src="img/image.jpg">
+						    	<div class="model-img">
+					   				<img src="img/image.jpg">
+					   				<div class="shop-it">
+					   					<p>Shop it</p>
+					   				</div>
+					   			</div>
 						    	<figcaption class="flex-column">
-					   				<p class="goods-name">Petrol Sweater</p>
+					   				<a href="" class="goods-name">Petrol Sweater</a>
 					   				<p class="goods-price">$21.50</p>
 					   				<button class="goods-button">
 					   						Add to cart
-					   						<i class="fa fa-plus"></i>
-					   					</button>
+					   					<i class="fa fa-plus"></i>
+					   				</button>
 					   			</figcaption>
 					    	</figure>
 					    </li>
 					    <li>
 					    	<figure>
-								<img src="img/image.jpg">
+								<div class="model-img">
+					   				<img src="img/image.jpg">
+					   				<div class="shop-it">
+					   					<p>Shop it</p>
+					   				</div>
+					   				<div class="shop-sale">
+					   					<p>Sale</p>
+					   				</div>
+					   			</div>
 								<figcaption class="flex-column">
-					   				<p class="goods-name">Petrol Sweater</p>
+					   				<a href="" class="goods-name">Petrol Sweater</a>
 					   				<p class="goods-price">$21.50</p>
 					   				<button class="goods-button">
 					   						Add to cart
-					   						<i class="fa fa-plus"></i>
-					   					</button>
+					   					<i class="fa fa-plus"></i>
+					   				</button>
 					   			</figcaption>
 					    	</figure>
 					    </li>
 					    <li>
 					    	<figure>
-								<img src="img/image.jpg">
+								<div class="model-img">
+					   				<img src="img/image.jpg">
+					   				<div class="shop-it">
+					   					<p>Shop it</p>
+					   				</div>
+					   			</div>
 								<figcaption class="flex-column">
-					   				<p class="goods-name">Petrol Sweater</p>
+					   				<a href="" class="goods-name">Petrol Sweater</a>
 					   				<p class="goods-price">$21.50</p>
 					   				<button class="goods-button">
 					   						Add to cart
-					   						<i class="fa fa-plus"></i>
-					   					</button>
+					   					<i class="fa fa-plus"></i>
+					   				</button>
 					   			</figcaption>
 					    	</figure>
 					    </li>
@@ -326,7 +401,13 @@
 				</div>
 			</div>
 			<div class="brands border-line">
-				<h2>Favorite Brands</h2>
+				<div class="flex">
+					<div class="line"></div>
+					<div class="line-border">
+						<h2>Favorite Brands</h2>
+					</div>
+					<div class="line"></div>
+				</div>
 				<ul class="wrap-center">
 					<li class="addict"><a href=""></a></li>
 					<li class="abandon"><a href=""></a></li>
@@ -348,7 +429,7 @@
 		<footer>
 			<div class="mob-footer">
 				<div class="flex">
-					<i class="fa fa-bars dropdown"></i>
+					<i class="fa fa-bars off-canvas"></i>
 					<div class="copy">
 						<p>© LookShop.com</p>
 						<p>All Rights Reserved</p>

@@ -111,14 +111,18 @@ h3 {
   font-size: 14px;
   color: #b3b3b3; }
 
-.dropdown {
+.dropdown,
+.off-canvas {
   cursor: pointer; }
 
 .dropdown::after {
-  /* content: "";
-	background: url("../img/icons.png") no-repeat;
-	display: block;
-	cursor: pointer;*/ }
+  content: "\f0d7";
+  position: relative;
+  top: 2px;
+  right: -4px;
+  font-family: FontAwesome;
+  color: #000;
+  font-size: 13px; }
 
 .form-cart {
   position: relative;
@@ -127,26 +131,22 @@ h3 {
     border: solid 1px #d6d6d6;
     padding: 5px 10px;
     width: 188px; }
+  .form-cart .dropdown::after {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    color: #c1c1c1; }
   .form-cart .cart {
-    display: none; }
-  .form-cart .active {
     display: block;
     border: solid 1px #d6d6d6;
     padding: 5px 10px;
     background: #fafafa;
     overflow: hidden; }
-    .form-cart .active p {
+    .form-cart .cart p {
       float: right; }
 
 .second-header {
   padding: 23px 0; }
-  .second-header .dropdown::after {
-    position: absolute;
-    top: 8px;
-    right: 5px;
-    width: 8px;
-    height: 8px;
-    background-position: 0 -63px; }
 
 .mob-menu {
   display: none; }
@@ -164,18 +164,10 @@ h3 {
     background: #fff;
     z-index: 1; }
     .main-menu .submenu li {
-      padding: 10px 0;
+      padding: 10px;
       width: 100%; }
   .main-menu li:hover .submenu {
     display: block; }
-
-.main-menu .dropdown::after {
-  width: 8px;
-  height: 9px;
-  position: absolute;
-  right: -10px;
-  top: 3px;
-  background-position: -10px -62px; }
 
 .logo {
   background: url("../img/logo.png") no-repeat;
@@ -269,12 +261,8 @@ main {
       padding: 5px; }
   .update-email-social .find-us p {
     margin-right: 30px; }
-  .update-email-social p {
-    float: left; }
   .update-email-social a {
     display: block; }
-  .update-email-social ul {
-    float: right; }
   .update-email-social li {
     display: inline-block;
     background: #f7f7f7; }
@@ -377,6 +365,7 @@ main {
   align-items: stretch;
   flex-wrap: nowrap;
   justify-content: space-around;
+  padding-left: 35px;
   overflow: hidden; }
   .b-model img {
     width: 220px; }
@@ -385,6 +374,59 @@ main {
   .b-model li {
     background: #f7f7f7;
     margin-right: 30px; }
+  .b-model .model-img {
+    position: relative; }
+  .b-model .shop-it {
+    display: none; }
+    .b-model .shop-it p {
+      font-size: 12px;
+      text-transform: uppercase;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      color: #fff; }
+      .b-model .shop-it p::before {
+        content: "\f290";
+        font-family: FontAwesome;
+        font-size: 40px;
+        display: block;
+        padding-bottom: 10px; }
+  .b-model .shop-sale {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: #fff; }
+    .b-model .shop-sale::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 50px 0 0;
+      border-color: #4c4c4c transparent transparent transparent; }
+    .b-model .shop-sale p {
+      color: #fff;
+      font-size: 11px;
+      text-transform: uppercase;
+      position: absolute;
+      z-index: 1;
+      top: 3px;
+      left: 3px; }
+  .b-model .model-img:hover .shop-it {
+    display: table;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #3d3d3d;
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin: auto; }
 
 .clothes-model .model-more {
   display: none;
@@ -395,19 +437,25 @@ main {
   text-transform: uppercase;
   font-size: 20px; }
 
-.border-line .left,
-.border-line .right {
-  border-top: solid 1px #d8d8d8;
-  width: 40%; }
+.border-line .line {
+  height: 1px;
+  width: 100%;
+  background: #d8d8d8; }
 
-.border-line p {
-  text-align: center; }
+.border-line .line-border {
+  margin: 0 15px;
+  white-space: nowrap; }
+
+.sale-percent {
+  margin: 25px auto; }
 
 .circle img {
-  margin: 25px 0; }
+  width: 160px; }
 
 .brands {
-  margin-top: 55px; }
+  border-bottom: solid 1px #d8d8d8;
+  padding-bottom: 25px;
+  margin-top: 30px; }
   .brands ul {
     display: flex;
     overflow: hidden; }
@@ -444,7 +492,7 @@ main {
 
 .about-shop {
   text-align: center;
-  margin-top: 40px; }
+  margin-top: 20px; }
 
 button {
   background: #fd926d;
@@ -453,6 +501,8 @@ button {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer; }
+  button:hover {
+    background: #f4845d; }
 
 /*--------footer----*/
 footer {
@@ -599,7 +649,8 @@ footer {
     text-align: center;
     background: #fd926d; }
   .b-model {
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    padding-left: 0px; }
   .special-flex {
     display: inline-block;
     margin-right: 0; }
@@ -642,9 +693,12 @@ footer {
       font-size: 30px; }
   .mob-main-menu a {
     font-size: 20px; }
-  .form-cart .active {
-    padding: 20px 10px; }
-    .form-cart .active p {
+  .form-cart .dropdown::after {
+    content: ""; }
+  .form-cart .cart {
+    padding: 20px 10px;
+    display: block; }
+    .form-cart .cart p {
       font-size: 30px;
       text-transform: uppercase; }
   .cart .fa-shopping-bag {
@@ -652,10 +706,12 @@ footer {
   .mob-tabs-menu {
     display: block;
     background: #f4845d; }
+    .mob-tabs-menu a {
+      font-size: 30px; }
     .mob-tabs-menu .active {
       background: #f4845d; }
     .mob-tabs-menu li {
-      padding: 30px 20px; }
+      padding: 10px 20px; }
       .mob-tabs-menu li:hover {
         background: #f4845d; }
     .mob-tabs-menu .submenu {
@@ -663,13 +719,25 @@ footer {
       position: absolute;
       left: 0;
       background: #f4845d;
-      z-index: 1;
+      z-index: 2;
       width: 100%; }
       .mob-tabs-menu .submenu li {
         width: 100%; }
         .mob-tabs-menu .submenu li:hover {
           background: #f4845d; }
+      .mob-tabs-menu .submenu a {
+        font-size: 20px; }
     .mob-tabs-menu li:hover .submenu {
+      display: block; }
+  .tabs {
+    position: relative; }
+    .tabs .dropdown::after {
+      position: absolute;
+      top: 35px;
+      right: 30px;
+      font-size: 20px;
+      color: #fff; }
+    .tabs .dropdown:hover .submenu {
       display: block; }
   .second-header {
     margin: 0 15px; }
@@ -677,8 +745,6 @@ footer {
       align-self: center; }
     .second-header .right {
       align-self: center; }
-      .second-header .right .dropdown::after {
-        background: none; }
   .form-cart {
     margin: 70px 0 25px;
     width: 100%; }
