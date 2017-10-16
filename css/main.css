@@ -71,8 +71,7 @@ h3 {
 
 /*---header---*/
 .first-header {
-  background: #000;
-  padding: 5px 0; }
+  background: #000; }
   .first-header p,
   .first-header li,
   .first-header a {
@@ -83,7 +82,15 @@ h3 {
     border-left: solid 1px #666666;
     box-sizing: border-box;
     padding: 0 15px;
-    display: inline-block; }
+    display: inline-block;
+    height: 30px;
+    line-height: 30px; }
+    .first-header li:last-child {
+      border-right: solid 1px #666666; }
+    .first-header li a,
+    .first-header li select {
+      display: block;
+      height: 100%; }
   .first-header select {
     border: none;
     background: #000;
@@ -92,39 +99,26 @@ h3 {
     .first-header select option {
       background: #fff; }
 
-.search a::after {
-  content: "";
-  background: url("../img/icons.png") no-repeat;
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  position: relative;
-  top: 3px; }
+.fa-search {
+  transform: rotate(90deg); }
 
-.my-account a::before {
-  content: "";
-  background: url("../img/icons.png") no-repeat;
-  width: 22px;
-  height: 18px;
-  display: inline-block;
-  background-position: 0 -44px;
-  position: relative;
-  top: 4px; }
+.my-account .fa {
+  font-size: 20px;
+  margin: 4px 10px 0;
+  color: gray; }
 
-.cart::before {
-  content: "";
-  background: url("../img/icons.png") no-repeat;
-  width: 30px;
-  height: 19px;
-  display: block;
-  background-position: 0 -23px;
-  float: left; }
+.cart .fa-shopping-bag {
+  font-size: 14px;
+  color: #b3b3b3; }
+
+.dropdown {
+  cursor: pointer; }
 
 .dropdown::after {
-  content: "";
-  background: url("../img/icons.png") no-repeat;
-  display: block;
-  cursor: pointer; }
+  /* content: "";
+	background: url("../img/icons.png") no-repeat;
+	display: block;
+	cursor: pointer;*/ }
 
 .form-cart {
   position: relative;
@@ -154,7 +148,7 @@ h3 {
     height: 8px;
     background-position: 0 -63px; }
 
-#dropdown-menu {
+.mob-menu {
   display: none; }
 
 .main-menu {
@@ -185,8 +179,8 @@ h3 {
 
 .logo {
   background: url("../img/logo.png") no-repeat;
+  background-size: contain;
   width: 120px;
-  display: block;
   height: 28px; }
 
 /*----main-----*/
@@ -207,17 +201,18 @@ main {
   z-index: 1;
   background: #fdfcfb;
   width: 30px;
-  height: 115px; }
+  height: 115px;
+  overflow: hidden; }
 
 .slick-next::before,
 .slick-prev::before {
   content: url("../img/arrow.png");
-  width: 12px;
-  height: 18px;
+  width: 15px;
+  height: 30px;
   display: block;
   margin: auto; }
 
-.slick-prev::before {
+.slick-next::before {
   transform: rotate(180deg); }
 
 .slick-prev:hover,
@@ -250,13 +245,10 @@ main {
   /**/ }
 
 .plus {
-  width: 30px;
-  height: 29px;
-  font-size: 28px;
   position: absolute;
   right: 0;
-  top: 0px;
-  padding: 0; }
+  top: 0;
+  padding: 7px 10px; }
 
 .update-email-social {
   background: #ededed;
@@ -265,11 +257,14 @@ main {
   padding: 10px 0; }
   .update-email-social .fa-stack {
     font-size: 30px; }
+  .update-email-social .fa-stack:hover {
+    background: #ededed; }
   .update-email-social .fa-stack-1x {
     font-size: 20px;
     color: #6b6b6b; }
   .update-email-social .email {
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .update-email-social .email input {
       padding: 5px; }
   .update-email-social .find-us p {
@@ -295,12 +290,13 @@ main {
   background: #fff; }
   .tabs-menu a,
   .mob-tabs-menu a {
-    color: #555555; }
+    color: #555555;
+    padding: 15px 20px;
+    display: block; }
   .tabs-menu li,
   .mob-tabs-menu li {
     display: inline-block;
-    text-transform: uppercase;
-    padding: 15px 20px; }
+    text-transform: uppercase; }
     .tabs-menu li:hover,
     .mob-tabs-menu li:hover {
       background: #fd926d; }
@@ -313,8 +309,7 @@ main {
   .mob-tabs-menu .next {
     float: right;
     background: #f2f2f2;
-    height: 18px;
-    width: 7px; }
+    position: relative; }
     .tabs-menu .prev:hover, .tabs-menu .prev:focus,
     .tabs-menu .next:hover,
     .tabs-menu .next:focus,
@@ -322,7 +317,39 @@ main {
     .mob-tabs-menu .prev:focus,
     .mob-tabs-menu .next:hover,
     .mob-tabs-menu .next:focus {
-      background: #fd926d; }
+      background-color: #fd926d; }
+    .tabs-menu .prev a,
+    .tabs-menu .next a,
+    .mob-tabs-menu .prev a,
+    .mob-tabs-menu .next a {
+      position: relative;
+      padding: 0;
+      width: 48px;
+      height: 48px; }
+      .tabs-menu .prev a:hover::after,
+      .tabs-menu .next a:hover::after,
+      .mob-tabs-menu .prev a:hover::after,
+      .mob-tabs-menu .next a:hover::after {
+        background-position: -15px 0;
+        transform: rotate(180deg); }
+      .tabs-menu .prev a::after,
+      .tabs-menu .next a::after,
+      .mob-tabs-menu .prev a::after,
+      .mob-tabs-menu .next a::after {
+        content: "";
+        position: absolute;
+        background: url("../img/arrow.png") no-repeat;
+        height: 27px;
+        width: 15px;
+        left: 15px;
+        top: 10px; }
+  .tabs-menu .active a::after,
+  .mob-tabs-menu .active a::after {
+    background-position: -15px 0;
+    transform: rotate(180deg); }
+  .tabs-menu .next,
+  .mob-tabs-menu .next {
+    transform: rotate(180deg); }
   .tabs-menu .active,
   .mob-tabs-menu .active {
     background: #fd926d; }
@@ -534,16 +561,27 @@ footer {
 @media screen and (max-width: 748px) {
   .wrap-center {
     margin: 0 15px; }
+  .fa-bars {
+    color: #fff;
+    font-size: 40px; }
   .main-menu {
     display: none; }
-  #dropdown-menu {
+  .mob-menu {
     display: block;
     background: #fd926d;
     padding: 15px; }
-    #dropdown-menu a {
+    .mob-menu a {
       text-transform: uppercase;
       font-size: 18px;
       color: #fff; }
+  .mob-main-menu {
+    display: none; }
+  .mob-menu:hover .active {
+    display: block; }
+  .mob-main-menu li {
+    padding: 10px 0; }
+  .mob-main-menu a {
+    font-size: 15px; }
   .flex-row-column {
     flex-direction: column; }
   .second-header .left {
@@ -574,11 +612,19 @@ footer {
   .first-header li,
   .first-header select {
     font-size: 30px; }
+  .first-header li {
+    height: 95px;
+    line-height: 95px; }
   .logo {
-    background: url(../img/logo1.png) no-repeat;
+    background: url(../img/logo.png) no-repeat;
     width: 360px;
     height: 90px;
     margin: 30px auto 0; }
+  .plus {
+    padding: 18px 34px;
+    font-size: 50px; }
+  .my-account .fa {
+    font-size: 40px; }
   .update-email-social .find-us {
     margin-top: 30px;
     justify-content: center; }
@@ -590,20 +636,19 @@ footer {
     background: #ededed;
     border: none;
     width: 90%; }
-  .plus {
-    width: 95px;
-    height: 95px; }
-  .account-search {
-    padding: 30px 0; }
-  #dropdown-menu {
+  .mob-menu {
     padding: 30px; }
-    #dropdown-menu a {
+    .mob-menu a {
       font-size: 30px; }
+  .mob-main-menu a {
+    font-size: 20px; }
   .form-cart .active {
     padding: 20px 10px; }
     .form-cart .active p {
       font-size: 30px;
       text-transform: uppercase; }
+  .cart .fa-shopping-bag {
+    font-size: 30px; }
   .mob-tabs-menu {
     display: block;
     background: #f4845d; }
@@ -667,11 +712,22 @@ footer {
       float: none; }
   .b-model img {
     width: 275px; }
+  .b-model button {
+    padding: 20px 20px;
+    font-size: 20px; }
   .clothes-model .model-more {
     display: block; }
   .mob-footer {
     display: block;
     padding: 25px 15px; }
+  .mob-footer-menu {
+    display: none; }
+    .mob-footer-menu li {
+      padding: 10px 0; }
+      .mob-footer-menu li a {
+        font-size: 20px; }
+  .mob-footer:hover .active {
+    display: block; }
   .slider,
   .best-outfit,
   .pay-card,
