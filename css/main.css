@@ -263,10 +263,17 @@ main {
   margin-bottom: 40px;
   margin-top: 75px;
   padding: 10px 0; }
+  .update-email-social .fa-stack {
+    font-size: 30px; }
+  .update-email-social .fa-stack-1x {
+    font-size: 20px;
+    color: #6b6b6b; }
   .update-email-social .email {
     position: relative; }
     .update-email-social .email input {
       padding: 5px; }
+  .update-email-social .find-us p {
+    margin-right: 30px; }
   .update-email-social p {
     float: left; }
   .update-email-social a {
@@ -274,19 +281,8 @@ main {
   .update-email-social ul {
     float: right; }
   .update-email-social li {
-    display: inline-block; }
-    .update-email-social li a::after {
-      content: "";
-      background: url("../img/social.png") no-repeat;
-      display: block;
-      width: 25px;
-      height: 30px;
-      position: relative;
-      margin-top: -10px; }
-  .update-email-social .twetter a::after {
-    background-position: -43px 0; }
-  .update-email-social .p a::after {
-    background-position: -86px 0; }
+    display: inline-block;
+    background: #f7f7f7; }
 
 .best-outfit {
   margin-bottom: 45px; }
@@ -363,6 +359,15 @@ main {
     background: #f7f7f7;
     margin-right: 30px; }
 
+.clothes-model .model-more {
+  display: none;
+  background: #000;
+  margin: auto;
+  margin-top: 30px;
+  padding: 20px 60px;
+  text-transform: uppercase;
+  font-size: 20px; }
+
 .border-line .left,
 .border-line .right {
   border-top: solid 1px #d8d8d8;
@@ -429,6 +434,9 @@ footer {
   flex: 0 0 auto;
   margin-top: 40px; }
 
+.mob-footer {
+  display: none; }
+
 .footer-sale {
   background: url("../img/footer-sale.png") no-repeat;
   width: 107px;
@@ -454,32 +462,15 @@ footer {
     padding: 2px 0; }
 
 .footer-social {
-  width: 125px; }
+  width: 130px; }
   .footer-social li {
-    display: inline-block; }
+    display: inline-block;
+    font-size: 20px; }
   .footer-social a {
     display: block; }
-  .footer-social li a::after {
-    content: "";
-    background: url("../img/social.png") no-repeat;
-    width: 37px;
-    height: 43px;
-    display: inline-block;
-    background-position: 0px -40px; }
-  .footer-social .p a::after {
-    background-position: -40px -40px; }
-  .footer-social .facebook a::after {
-    background-position: -80px -40px; }
-  .footer-social .google a::after {
-    background-position: -117px -40px; }
-  .footer-social .tweet
-a::after {
-    background-position: -157px -40px; }
-  .footer-social .v a::after {
-    background-position: -197px -40px; }
 
 .footer-menu {
-  padding: 20px 0;
+  padding: 20px 15px;
   font-size: 11px; }
   .footer-menu .copy {
     text-align: right; }
@@ -588,6 +579,11 @@ a::after {
     width: 360px;
     height: 90px;
     margin: 30px auto 0; }
+  .update-email-social .find-us {
+    margin-top: 30px;
+    justify-content: center; }
+  .update-email-social p {
+    font-size: 26px; }
   .update-email-social .email input {
     padding: 30px;
     font-size: 30px;
@@ -609,17 +605,25 @@ a::after {
       font-size: 30px;
       text-transform: uppercase; }
   .mob-tabs-menu {
-    display: block; }
+    display: block;
+    background: #f4845d; }
+    .mob-tabs-menu .active {
+      background: #f4845d; }
+    .mob-tabs-menu li {
+      padding: 30px 20px; }
+      .mob-tabs-menu li:hover {
+        background: #f4845d; }
     .mob-tabs-menu .submenu {
       display: none;
       position: absolute;
       left: 0;
-      background: #fd926d;
+      background: #f4845d;
       z-index: 1;
       width: 100%; }
       .mob-tabs-menu .submenu li {
-        padding: 10px 20px;
         width: 100%; }
+        .mob-tabs-menu .submenu li:hover {
+          background: #f4845d; }
     .mob-tabs-menu li:hover .submenu {
       display: block; }
   .second-header {
@@ -652,10 +656,22 @@ a::after {
   .update-email-social {
     background: none;
     margin: 0 15px; }
+    .update-email-social .fa-stack-1x {
+      font-size: 40px;
+      color: #6b6b6b; }
+    .update-email-social .fa-stack {
+      width: 85px;
+      height: 85px;
+      line-height: 85px; }
     .update-email-social ul {
       float: none; }
   .b-model img {
     width: 275px; }
+  .clothes-model .model-more {
+    display: block; }
+  .mob-footer {
+    display: block;
+    padding: 25px 15px; }
   .slider,
   .best-outfit,
   .pay-card,
@@ -663,5 +679,6 @@ a::after {
   .about-shop,
   .tabs-menu,
   .your-cart,
-  .email-text {
+  .email-text,
+  .desk-footer {
     display: none; } }
