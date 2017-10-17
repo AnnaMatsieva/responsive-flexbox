@@ -457,11 +457,19 @@ main {
 	margin: 10px 0;
 }
 
+.clothes-model .b-model {
+	flex-wrap: wrap;
+	justify-content: space-between;
+	li {
+		margin-right: 0;
+	}
+}
+
 .b-model {
 	display: flex;
 	align-items: stretch;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-wrap: nowrap;
+	justify-content: center;
 	overflow: hidden;
 	height: 415px;
 
@@ -475,6 +483,7 @@ main {
 
 	li {
 		background: #f7f7f7;
+		margin-right: 35px;
 	}
 
 	.model-img {
@@ -483,6 +492,7 @@ main {
 
 	.shop-it {
 		display: none;
+		cursor: pointer;
 
 		p {
 			font-size: 12px;
@@ -547,7 +557,8 @@ main {
 	}
 }
 
-.clothes-model .model-more {
+.clothes-model .model-more,
+.clothes-model-sale .model-more {
 	display: none;
 	background: #000;
 	margin: auto;
@@ -901,9 +912,14 @@ footer {
     }
 
     .b-model {
-    	justify-content: flex-start;
+    	flex-wrap: wrap;
+    	justify-content: space-around;
     	padding-left: 0px;
     	flex: 3 30%;
+
+    	li {
+    		margin-right: 0;
+    	}
     }
 
     .special-flex {
@@ -1090,7 +1106,7 @@ footer {
 
 	.mob-3-col {
 		display: flex;
-	    justify-content: space-between;
+	    justify-content: space-around;
 	    align-items: center;
 	}
 
@@ -1127,7 +1143,8 @@ footer {
 
 	.b-model {
 			height: 515px;
-			
+			flex: 2 45%;
+
 		img {
 			width: 275px;
 		}
@@ -1136,13 +1153,15 @@ footer {
 			padding: 20px 20px;
     		font-size: 20px;
 		}
-
-		li {
-			flex: 2 45%;
-		}
 	}
 
-	.clothes-model .model-more {
+	.clothes-model .b-model{
+		flex-wrap: wrap;
+    	justify-content: space-around;
+    }
+
+	.clothes-model .model-more,
+	.clothes-model-sale .model-more {
 		display: block;
 	}
 

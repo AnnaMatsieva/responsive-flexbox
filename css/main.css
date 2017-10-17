@@ -360,11 +360,17 @@ main {
   font-size: 22px;
   margin: 10px 0; }
 
+.clothes-model .b-model {
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .clothes-model .b-model li {
+    margin-right: 0; }
+
 .b-model {
   display: flex;
   align-items: stretch;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-wrap: nowrap;
+  justify-content: center;
   overflow: hidden;
   height: 415px; }
   .b-model img {
@@ -372,11 +378,13 @@ main {
   .b-model figcaption {
     padding: 10px 0; }
   .b-model li {
-    background: #f7f7f7; }
+    background: #f7f7f7;
+    margin-right: 35px; }
   .b-model .model-img {
     position: relative; }
   .b-model .shop-it {
-    display: none; }
+    display: none;
+    cursor: pointer; }
     .b-model .shop-it p {
       font-size: 12px;
       text-transform: uppercase;
@@ -427,7 +435,8 @@ main {
     top: 100px;
     margin: auto; }
 
-.clothes-model .model-more {
+.clothes-model .model-more,
+.clothes-model-sale .model-more {
   display: none;
   background: #000;
   margin: auto;
@@ -648,9 +657,12 @@ footer {
     text-align: center;
     background: #fd926d; }
   .b-model {
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding-left: 0px;
     flex: 3 30%; }
+    .b-model li {
+      margin-right: 0; }
   .special-flex {
     display: inline-block;
     margin-right: 0; }
@@ -755,7 +767,7 @@ footer {
     align-items: inherit; }
   .mob-3-col {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center; }
   .first-header {
     padding: 0; }
@@ -777,15 +789,18 @@ footer {
     .update-email-social ul {
       float: none; }
   .b-model {
-    height: 515px; }
+    height: 515px;
+    flex: 2 45%; }
     .b-model img {
       width: 275px; }
     .b-model button {
       padding: 20px 20px;
       font-size: 20px; }
-    .b-model li {
-      flex: 2 45%; }
-  .clothes-model .model-more {
+  .clothes-model .b-model {
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .clothes-model .model-more,
+  .clothes-model-sale .model-more {
     display: block; }
   .mob-footer {
     display: block;
