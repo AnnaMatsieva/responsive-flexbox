@@ -363,17 +363,16 @@ main {
 .b-model {
   display: flex;
   align-items: stretch;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding-left: 35px;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 415px; }
   .b-model img {
     width: 220px; }
   .b-model figcaption {
     padding: 10px 0; }
   .b-model li {
-    background: #f7f7f7;
-    margin-right: 30px; }
+    background: #f7f7f7; }
   .b-model .model-img {
     position: relative; }
   .b-model .shop-it {
@@ -650,7 +649,8 @@ footer {
     background: #fd926d; }
   .b-model {
     justify-content: flex-start;
-    padding-left: 0px; }
+    padding-left: 0px;
+    flex: 3 30%; }
   .special-flex {
     display: inline-block;
     margin-right: 0; }
@@ -776,11 +776,15 @@ footer {
       line-height: 85px; }
     .update-email-social ul {
       float: none; }
-  .b-model img {
-    width: 275px; }
-  .b-model button {
-    padding: 20px 20px;
-    font-size: 20px; }
+  .b-model {
+    height: 515px; }
+    .b-model img {
+      width: 275px; }
+    .b-model button {
+      padding: 20px 20px;
+      font-size: 20px; }
+    .b-model li {
+      flex: 2 45%; }
   .clothes-model .model-more {
     display: block; }
   .mob-footer {
