@@ -3,7 +3,6 @@ body {
   height: 100%;
   margin: 0 auto;
   border: 0;
-  outline: 0;
   padding: 0;
   font-weight: 100;
   font-size: 100%;
@@ -193,7 +192,8 @@ main {
     bottom: 17%;
     left: 23%;
     z-index: 1;
-    padding: 20px 40px; }
+    padding: 17px 28px;
+    font-size: 16px; }
     .slick-slide button::after {
       content: "\f0d7";
       font-family: FontAwesome;
@@ -280,10 +280,12 @@ main {
       color: #9f9f9f;
       font-style: italic;
       margin-left: 10px; }
-  .update-email-social .find-us p {
-    margin-right: 30px;
-    font-size: 12px;
-    color: #6c6c6c; }
+  .update-email-social .find-us {
+    font-size: 0; }
+    .update-email-social .find-us p {
+      margin-right: 30px;
+      font-size: 12px;
+      color: #6c6c6c; }
   .update-email-social li {
     display: inline-block;
     background: #f7f7f7; }
@@ -308,14 +310,16 @@ main {
   .fourth-block button {
     position: absolute;
     bottom: 22px;
-    left: 28px; }
+    left: 28px;
+    border-bottom: none; }
 
 .mob-tabs-menu {
   display: none; }
 
 .tabs-menu,
 .mob-tabs-menu {
-  background: #fff; }
+  background: #fff;
+  font-size: 0; }
   .tabs-menu a,
   .mob-tabs-menu a {
     color: #555555;
@@ -324,7 +328,8 @@ main {
   .tabs-menu li,
   .mob-tabs-menu li {
     display: inline-block;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-size: 15px; }
     .tabs-menu li:hover,
     .mob-tabs-menu li:hover {
       background: #fd926d; }
@@ -353,7 +358,7 @@ main {
       position: relative;
       padding: 0;
       width: 48px;
-      height: 48px; }
+      height: 47px; }
       .tabs-menu .prev a:hover::after,
       .tabs-menu .next a:hover::after,
       .mob-tabs-menu .prev a:hover::after,
@@ -415,7 +420,7 @@ main {
     background: #f7f7f7;
     transform: scale(1, 1);
     padding-bottom: 10px;
-    margin: 0 15px 15px 0; }
+    margin: 0 15px 20px 0; }
     .b-model li:hover {
       transform: scale(1.04, 1.04); }
   .b-model .model-img {
@@ -476,6 +481,10 @@ main {
     padding: 10px 13px;
     font-size: 12px; }
 
+.clothes-model-sale,
+.clothes-model {
+  overflow: hidden; }
+
 .clothes-model .model-more,
 .clothes-model-sale .model-more {
   display: none;
@@ -483,6 +492,7 @@ main {
   margin: auto;
   margin-top: 30px;
   padding: 20px 50px;
+  border-bottom: none;
   text-transform: uppercase;
   font-size: 20px; }
 
@@ -504,13 +514,12 @@ main {
 .brands {
   border-bottom: solid 1px #d8d8d8;
   padding-bottom: 25px;
-  margin-top: 15px; }
+  margin-top: 0px; }
   .brands ul {
     display: flex;
     overflow: hidden;
     margin-top: -20px; }
   .brands h2 {
-    color: #414141;
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
@@ -547,6 +556,7 @@ button {
   background: #fd926d;
   border: none;
   padding: 10px 20px;
+  border-bottom: 3px solid #dd6b44;
   color: #fff;
   text-transform: uppercase;
   cursor: pointer; }
@@ -566,8 +576,9 @@ footer {
 .footer-sale {
   background: url("../img/footer-sale.png") no-repeat;
   width: 107px;
-  height: 107px;
-  position: relative; }
+  position: relative;
+  margin-left: 60px;
+  margin-top: 15px; }
   .footer-sale .sale {
     position: absolute;
     top: 25px;
@@ -580,7 +591,8 @@ footer {
 
 .footer-links {
   background: #ededed;
-  padding: 30px 0; }
+  padding: 30px 0;
+  overflow: hidden; }
   .footer-links ul {
     margin-top: 15px; }
   .footer-links li {
@@ -657,6 +669,11 @@ footer {
     .special-flex div:last-child {
       margin-right: 0; }
 
+.flex-footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center; }
+
 @media screen and (max-width: 768px) {
   .best-outfit {
     margin-bottom: 40px; }
@@ -698,6 +715,9 @@ footer {
     align-self: flex-end; }
   .form-cart {
     margin: -35px 0 30px 0; }
+  .slick-slide button {
+    padding: 13px 22px;
+    font-size: 12px; }
   .main-menu {
     text-align: center;
     background: #fd926d; }
@@ -707,13 +727,40 @@ footer {
     width: 100%;
     padding-left: 0px;
     flex: 3 30%; }
-    .b-model li {
-      margin: 0 0 15px 0; }
   .special-flex {
     display: inline-block;
     margin-right: 0; }
     .special-flex div {
-      margin-bottom: 40px; } }
+      margin-bottom: 40px; }
+  .slick-dots {
+    bottom: -40px; }
+  .update-email-social {
+    margin-top: 50px;
+    margin-bottom: 30px; }
+  .brands {
+    margin-top: 0px; }
+  .flex-tablet {
+    min-width: 710px;
+    width: 700px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: flex-start; }
+  .footer-sale {
+    margin-left: 25px; }
+  .footer-service {
+    width: 200px;
+    margin-bottom: 40px; }
+  .footer-information {
+    width: 200px; }
+  .footer-social {
+    width: 135px; }
+  .footer-campaigns {
+    order: 4;
+    width: 200px; }
+  .footer-stories {
+    order: 5;
+    width: 200px; } }
 
 @media screen and (max-width: 640px) {
   .first-header p,
@@ -745,12 +792,12 @@ footer {
   .update-email-social .find-us {
     margin-top: 30px;
     justify-content: center; }
+    .update-email-social .find-us p {
+      font-size: 26px; }
   .update-email-social .email {
-    width: 100%;
+    width: 95%;
     margin: 0px 15px;
     overflow: hidden; }
-  .update-email-social .find-us p {
-    font-size: 26px; }
   .update-email-social .email input {
     padding: 30px;
     font-size: 30px;
@@ -848,8 +895,6 @@ footer {
       line-height: 85px; }
   .b-model {
     flex: 2 45%; }
-    .b-model li {
-      height: 520px; }
     .b-model img {
       width: 275px; }
     .b-model button {
@@ -885,5 +930,5 @@ footer {
   .tabs-menu,
   .your-cart input,
   .email-text,
-  .desk-footer {
+  .desktop-footer {
     display: none; } }

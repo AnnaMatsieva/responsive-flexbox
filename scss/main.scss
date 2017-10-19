@@ -1,11 +1,14 @@
 $mainColor: #fd926d;
+$mainActiveColor: #f4845d;
+$inputBackground: #d6d6d6;
+$grayBackground: #ededed;
+$darkGrayColor: #6b6b6b;
 
 html,
 body {
   height: 100%;
   margin: 0 auto;
   border: 0;
-  outline: 0;
   padding: 0;
   font-weight: 100;
   font-size: 100%;
@@ -169,7 +172,7 @@ h3 {
 	position: relative;
 
 	input {
-	    border: solid 1px #d6d6d6;
+	    border: solid 1px $inputBackground;
 	    padding: 5px 10px;
 	}
 
@@ -182,7 +185,7 @@ h3 {
 
     .cart {
     	display: block;
-    	border: solid 1px #d6d6d6;
+    	border: solid 1px $inputBackground;
     	padding: 5px 10px;
     	background: #fafafa;
     	overflow: hidden;
@@ -254,7 +257,8 @@ main {
 		bottom: 17%;
 	    left: 23%;
 	    z-index: 1;
-	    padding: 20px 40px;
+	    padding: 17px 28px;
+	    font-size: 16px;
 
 	    &::after {
 	    	content: "\f0d7";
@@ -329,7 +333,7 @@ main {
 }
 
 .update-email-social {
-	background: #ededed;
+	background: $grayBackground;
 	margin-bottom: 40px;
 	margin-top: 75px;
 
@@ -338,12 +342,12 @@ main {
 	}
 
 	.find-us li:nth-child(2n) {
-		background: #ededed;
+		background: $grayBackground;
 	}
 
 	.fa-stack-1x {
 		font-size: 20px;
-		color: #6b6b6b;
+		color: $darkGrayColor;
 	}
 
 	.email {
@@ -352,7 +356,7 @@ main {
 
 		label {
 			font-size: 12px;
-			color: #6b6b6b;
+			color: $darkGrayColor;
 		}
 
 		input {
@@ -368,6 +372,8 @@ main {
 	}
 
 	.find-us {
+		font-size: 0;
+
    		p {
     		margin-right: 30px;
     		font-size: 12px;
@@ -410,6 +416,7 @@ main {
 		position: absolute;
 		bottom: 22px;
     	left: 28px;
+    	border-bottom: none;
 	}
 }
 
@@ -420,6 +427,7 @@ main {
 .tabs-menu,
 .mob-tabs-menu {
 	background: #fff;
+	font-size: 0;
 
 	a {
 		color: #555555;
@@ -430,6 +438,7 @@ main {
 	li {
 		display: inline-block;
 		text-transform: uppercase;
+		font-size: 15px;
 
 		&:hover {
 			background: $mainColor;
@@ -455,7 +464,7 @@ main {
     		position: relative;
     		padding: 0;
     		width: 48px;
-    		height: 48px;
+    		height: 47px;
 
     		&:hover::after {
     			background-position: -15px 0;
@@ -528,7 +537,7 @@ main {
 		background: #f7f7f7;
 		transform: scale(1,1);
 		padding-bottom: 10px;
-		margin: 0 15px 15px 0;
+		margin: 0 15px 20px 0;
 
 		&:hover {
 			transform: scale(1.04,1.04);
@@ -611,6 +620,11 @@ main {
 	}
 }
 
+.clothes-model-sale,
+.clothes-model {
+	overflow: hidden;
+}
+
 .clothes-model .model-more,
 .clothes-model-sale .model-more {
 	display: none;
@@ -618,6 +632,7 @@ main {
 	margin: auto;
     margin-top: 30px;
     padding: 20px 50px;
+    border-bottom: none;
     text-transform: uppercase;
     font-size: 20px;
 }
@@ -646,7 +661,7 @@ main {
 .brands {
 	border-bottom: solid 1px #d8d8d8;
     padding-bottom: 25px;
-    margin-top: 15px;
+    margin-top: 0px;
 
 	ul {
 		display: flex;
@@ -655,7 +670,6 @@ main {
 	}
 
 	h2 {
-		color: #414141;
 		font-size: 15px;
 		font-weight: bold;
 		text-transform: uppercase;
@@ -714,12 +728,13 @@ button {
 	background: $mainColor;
 	border: none;
     padding: 10px 20px;
+    border-bottom: 3px solid #dd6b44;
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
 
     &:hover {
-    	background: #f4845d;
+    	background: $mainActiveColor;
     }
 }
 
@@ -737,9 +752,10 @@ footer {
 
 .footer-sale {
 	background: url("../img/footer-sale.png") no-repeat;
-	width: 107px;
-	height: 107px;
-	position: relative;
+    width: 107px;
+    position: relative;
+    margin-left: 60px;
+    margin-top: 15px;
 
 	.sale {
 		position: absolute;
@@ -758,8 +774,9 @@ footer {
 }
 
 .footer-links {
-	background: #ededed;
+	background: $grayBackground;
 	padding: 30px 0;
+	overflow: hidden;
 
 	ul {
 		margin-top: 15px;
@@ -887,8 +904,16 @@ footer {
 		margin-right: 40px;
 
 		&:last-child {margin-right: 0;}
-	}
+	}	
 }
+
+.flex-footer {
+  
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
 
 @media screen and (max-width: 768px) {
 
@@ -968,6 +993,11 @@ footer {
     	margin: -35px 0 30px 0;
     }
 
+    .slick-slide button {
+    	padding: 13px 22px;
+    	font-size: 12px;
+    }
+
     .main-menu {
     	text-align: center;
     	background: $mainColor;
@@ -979,10 +1009,6 @@ footer {
     	width: 100%;
     	padding-left: 0px;
     	flex: 3 30%;
-
-    	li {
-    		margin: 0 0 15px 0;
-    	}
     }
 
     .special-flex {
@@ -993,6 +1019,55 @@ footer {
     		margin-bottom: 40px;
     	}
     }
+
+    .slick-dots {
+		bottom: -40px;
+	}
+
+    .update-email-social {
+    	margin-top: 50px;
+    	margin-bottom: 30px;
+    }
+
+    .brands {
+    	margin-top: 0px;
+    }
+
+	.flex-tablet {
+	    min-width: 710px;
+	    width: 700px;
+	    flex-direction: row;
+	    flex-wrap: wrap;
+	    align-content: start;
+	    justify-content: flex-start;
+	}
+  	
+	.footer-sale {
+		margin-left: 25px;
+	}
+
+	.footer-service {
+  		width: 200px;
+    	margin-bottom: 40px;
+  	}
+  
+	.footer-information {
+		width: 200px;
+	}
+  
+	.footer-social {
+		width: 135px;
+	}
+  
+	.footer-campaigns {
+		order: 4;
+		width: 200px;
+	}
+  
+	.footer-stories {
+		order: 5;
+		width: 200px;
+  	}
 
 }
 
@@ -1046,22 +1121,22 @@ footer {
 		.find-us {
 			margin-top: 30px;
     		justify-content: center;
+
+    		p {
+				font-size:  26px;
+			}
 		}
 
 		.email {
-			width: 100%;
+			width: 95%;
 			margin: 0px 15px;
     		overflow: hidden;
-		}
-
-		.find-us p {
-			font-size:  26px;
 		}
 
 		.email input {
 			padding: 30px;
 			font-size: 30px;
-			background: #ededed;
+			background: $grayBackground;
 			border: none;
 			width: 100%;
     		margin: auto;
@@ -1104,21 +1179,21 @@ footer {
 
 	.mob-tabs-menu {
 		display: block;
-		background: #f4845d;
+		background: $mainActiveColor;
 
 		a {
 			font-size: 30px;
 		}
 
 		.active {
-			background: #f4845d;
+			background: $mainActiveColor;
 		}
 
 		li {
 			padding: 10px 20px;
 
 			&:hover {
-				background: #f4845d;
+				background: $mainActiveColor;
 			}
 		}
 
@@ -1126,7 +1201,7 @@ footer {
 			display: none;
 			position: absolute;
 			left: 0;
-			background: #f4845d;;
+			background: $mainActiveColor;
 			z-index: 2;
 			width: 100%;
 
@@ -1134,7 +1209,7 @@ footer {
 				width: 100%;
 
 				&:hover {
-					background: #f4845d;
+					background: $mainActiveColor;
 				}
 			}
 
@@ -1215,7 +1290,7 @@ footer {
 
 		.fa-stack-1x {
 			font-size: 40px;
-			color: #6b6b6b;
+			color: $darkGrayColor;
 		}
 
 		.fa-stack {
@@ -1227,10 +1302,6 @@ footer {
 
 	.b-model {
 		flex: 2 45%;
-
-		li {
-			height: 520px;
-		}
 
 		img {
 			width: 275px;
@@ -1292,7 +1363,7 @@ footer {
 	.tabs-menu,
 	.your-cart input,
 	.email-text,
-	.desk-footer {
+	.desktop-footer {
 		display: none;
 	}
 }
