@@ -250,9 +250,9 @@ main {
 
 .plus {
   position: absolute;
-  right: -30px;
+  right: 0;
   top: 0;
-  padding: 7px 10px; }
+  padding: 7px 8px; }
 
 .update-email-social {
   background: #ededed;
@@ -266,7 +266,8 @@ main {
     font-size: 20px;
     color: #6b6b6b; }
   .update-email-social .email {
-    position: relative; }
+    position: relative;
+    width: 240px; }
     .update-email-social .email label {
       font-size: 12px;
       color: #6b6b6b; }
@@ -274,19 +275,21 @@ main {
       padding: 0 5px;
       height: 30px;
       line-height: 30px;
-      width: 130px;
+      width: 120px;
       border: none;
       color: #9f9f9f;
       font-style: italic;
       margin-left: 10px; }
   .update-email-social .find-us p {
-    margin-right: 30px; }
+    margin-right: 30px;
+    font-size: 12px;
+    color: #6c6c6c; }
   .update-email-social li {
     display: inline-block;
     background: #f7f7f7; }
 
 .best-outfit {
-  margin-bottom: 45px; }
+  margin-bottom: 50px; }
   .best-outfit button {
     background: #4fafa0;
     padding: 7px 15px 7px 10px;
@@ -400,21 +403,19 @@ main {
 .clothes-model .b-model {
   justify-content: space-around; }
 
-.clothes-model-sale,
-.clothes-model {
-  overflow: hidden; }
-
 .b-model {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto; }
   .b-model img {
     width: 220px; }
   .b-model li {
     background: #f7f7f7;
     transform: scale(1, 1);
     padding-bottom: 10px;
-    margin: 0 15px 5px 15px; }
+    margin: 0 15px 15px 0; }
     .b-model li:hover {
       transform: scale(1.04, 1.04); }
   .b-model .model-img {
@@ -481,7 +482,7 @@ main {
   background: #000;
   margin: auto;
   margin-top: 30px;
-  padding: 20px 60px;
+  padding: 20px 50px;
   text-transform: uppercase;
   font-size: 20px; }
 
@@ -657,19 +658,21 @@ footer {
       margin-right: 0; }
 
 @media screen and (max-width: 768px) {
+  .best-outfit {
+    margin-bottom: 40px; }
   .first-header {
     margin-bottom: 20px; }
   .second-header {
     padding: 10px 0; }
   .fa-bars {
     color: #fff;
-    font-size: 40px; }
+    font-size: 25px; }
   .main-menu {
     display: none; }
   .mob-menu {
     display: block;
     background: #fd926d;
-    padding: 5px 20px; }
+    padding: 13px 15px; }
     .mob-menu a {
       text-transform: uppercase;
       font-size: 18px;
@@ -704,6 +707,8 @@ footer {
     width: 100%;
     padding-left: 0px;
     flex: 3 30%; }
+    .b-model li {
+      margin: 0 0 15px 0; }
   .special-flex {
     display: inline-block;
     margin-right: 0; }
@@ -716,9 +721,17 @@ footer {
   .first-header li,
   .first-header select {
     font-size: 30px; }
+  .fa-bars {
+    font-size: 40px; }
+  .first-header .search a {
+    font-size: 40px; }
   .first-header li {
     height: 95px;
     line-height: 95px; }
+    .first-header li:first-child {
+      border-left: none; }
+    .first-header li:last-child {
+      border-right: none; }
   .logo {
     background: url(../img/logo.png) no-repeat;
     width: 360px;
@@ -732,14 +745,19 @@ footer {
   .update-email-social .find-us {
     margin-top: 30px;
     justify-content: center; }
-  .update-email-social p {
+  .update-email-social .email {
+    width: 100%;
+    margin: 0px 15px;
+    overflow: hidden; }
+  .update-email-social .find-us p {
     font-size: 26px; }
   .update-email-social .email input {
     padding: 30px;
     font-size: 30px;
     background: #ededed;
     border: none;
-    width: 90%; }
+    width: 100%;
+    margin: auto; }
   .mob-menu {
     padding: 30px; }
     .mob-menu a {
@@ -749,13 +767,13 @@ footer {
   .form-cart .dropdown::after {
     content: ""; }
   .form-cart .cart {
-    padding: 20px 10px;
+    padding: 30px 10px;
     display: block; }
     .form-cart .cart p {
       font-size: 30px;
       text-transform: uppercase; }
   .cart .fa-shopping-bag {
-    font-size: 30px; }
+    font-size: 40px; }
   .mob-tabs-menu {
     display: block;
     background: #f4845d; }
@@ -799,7 +817,7 @@ footer {
     .second-header .right {
       align-self: center; }
   .form-cart {
-    margin: 70px 0 40px;
+    margin: 55px 0 25px;
     width: 100%; }
   .wrap-center {
     margin: 0 auto;
@@ -835,7 +853,7 @@ footer {
     .b-model img {
       width: 275px; }
     .b-model button {
-      padding: 20px 20px;
+      padding: 20px 30px;
       font-size: 20px; }
   .b-tab {
     padding: 40px 0; }
@@ -844,9 +862,13 @@ footer {
   .clothes-model .model-more,
   .clothes-model-sale .model-more {
     display: block; }
+  footer {
+    margin-top: 30px; }
   .mob-footer {
     display: block;
     padding: 25px 15px; }
+    .mob-footer p {
+      font-size: 24px; }
   .mob-footer-menu {
     display: none; }
     .mob-footer-menu li {
