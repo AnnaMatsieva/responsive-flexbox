@@ -7,13 +7,13 @@ body {
   padding: 0;
   font-weight: 100;
   font-size: 100%;
+  width: 100%;
   color: #000;
   font-family: 'Arial', sans-serif; }
 
 body {
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
   font-size: 16px; }
 
 ul {
@@ -43,6 +43,7 @@ figure {
 
 h2 {
   font-size: 24px;
+  font-weight: 100;
   color: #414141;
   padding: 30px 0 25px; }
 
@@ -56,7 +57,8 @@ h3 {
 
 .wrap-center {
   max-width: 970px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 15px; }
 
 .flex {
   display: flex;
@@ -81,7 +83,6 @@ h3 {
   .first-header li {
     border-left: solid 1px #666666;
     box-sizing: border-box;
-    padding: 0 15px;
     display: inline-block;
     height: 30px;
     line-height: 30px; }
@@ -91,12 +92,16 @@ h3 {
     .first-header li select {
       display: block;
       height: 100%; }
+    .first-header li a {
+      padding: 0 15px; }
   .first-header select {
     border: none;
     background: #000;
     color: #fff;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 0 15px; }
     .first-header select option {
+      color: #000;
       background: #fff; }
 
 .fa-search {
@@ -125,12 +130,10 @@ h3 {
   font-size: 13px; }
 
 .form-cart {
-  position: relative;
-  width: 210px; }
+  position: relative; }
   .form-cart input {
     border: solid 1px #d6d6d6;
-    padding: 5px 10px;
-    width: 188px; }
+    padding: 5px 10px; }
   .form-cart .dropdown::after {
     position: absolute;
     right: 5px;
@@ -179,6 +182,10 @@ h3 {
 main {
   flex: 1 0 auto; }
 
+.slick-slider {
+  margin: auto;
+  max-width: 1200px; }
+
 .slick-slide {
   position: relative; }
   .slick-slide button {
@@ -187,6 +194,11 @@ main {
     left: 23%;
     z-index: 1;
     padding: 20px 40px; }
+    .slick-slide button::after {
+      content: "\f0d7";
+      font-family: FontAwesome;
+      position: relative;
+      left: 10px; }
 
 .slick-next,
 .slick-prev {
@@ -238,37 +250,62 @@ main {
 
 .plus {
   position: absolute;
-  right: 0;
+  right: -30px;
   top: 0;
   padding: 7px 10px; }
 
 .update-email-social {
   background: #ededed;
   margin-bottom: 40px;
-  margin-top: 75px;
-  padding: 10px 0; }
+  margin-top: 75px; }
   .update-email-social .fa-stack {
     font-size: 30px; }
-  .update-email-social .fa-stack:hover {
+  .update-email-social .find-us li:nth-child(2n) {
     background: #ededed; }
   .update-email-social .fa-stack-1x {
     font-size: 20px;
     color: #6b6b6b; }
   .update-email-social .email {
-    position: relative;
-    overflow: hidden; }
+    position: relative; }
+    .update-email-social .email label {
+      font-size: 12px;
+      color: #6b6b6b; }
     .update-email-social .email input {
-      padding: 5px; }
+      padding: 0 5px;
+      height: 30px;
+      line-height: 30px;
+      width: 130px;
+      border: none;
+      color: #9f9f9f;
+      font-style: italic;
+      margin-left: 10px; }
   .update-email-social .find-us p {
     margin-right: 30px; }
-  .update-email-social a {
-    display: block; }
   .update-email-social li {
     display: inline-block;
     background: #f7f7f7; }
 
 .best-outfit {
   margin-bottom: 45px; }
+  .best-outfit button {
+    background: #4fafa0;
+    padding: 7px 15px 7px 10px;
+    font-size: 12px; }
+    .best-outfit button::after {
+      content: "\f0da";
+      font-family: FontAwesome;
+      position: relative;
+      left: 5px;
+      transform: rotate(90deg); }
+    .best-outfit button:hover {
+      background: #4aa597; }
+
+.fourth-block {
+  position: relative; }
+  .fourth-block button {
+    position: absolute;
+    bottom: 22px;
+    left: 28px; }
 
 .mob-tabs-menu {
   display: none; }
@@ -279,7 +316,7 @@ main {
   .tabs-menu a,
   .mob-tabs-menu a {
     color: #555555;
-    padding: 15px 20px;
+    padding: 15px;
     display: block; }
   .tabs-menu li,
   .mob-tabs-menu li {
@@ -348,38 +385,38 @@ main {
 .b-tab {
   background: #fd926d;
   padding: 25px 0; }
-  .b-tab button {
-    padding: 10px 15px; }
 
 .goods-name {
   color: #373737;
   font-size: 12px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-top: 5px; }
 
 .goods-price {
   font-size: 22px;
-  margin: 10px 0; }
+  margin: 5px 0;
+  color: #373737; }
 
 .clothes-model .b-model {
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  .clothes-model .b-model li {
-    margin-right: 0; }
+  justify-content: space-around; }
+
+.clothes-model-sale,
+.clothes-model {
+  overflow: hidden; }
 
 .b-model {
   display: flex;
-  align-items: stretch;
   flex-wrap: nowrap;
-  justify-content: center;
-  overflow: hidden;
-  height: 415px; }
+  justify-content: space-around; }
   .b-model img {
     width: 220px; }
-  .b-model figcaption {
-    padding: 10px 0; }
   .b-model li {
     background: #f7f7f7;
-    margin-right: 35px; }
+    transform: scale(1, 1);
+    padding-bottom: 10px;
+    margin: 0 15px 5px 15px; }
+    .b-model li:hover {
+      transform: scale(1.04, 1.04); }
   .b-model .model-img {
     position: relative; }
   .b-model .shop-it {
@@ -434,6 +471,9 @@ main {
     right: 0;
     top: 100px;
     margin: auto; }
+  .b-model button {
+    padding: 10px 13px;
+    font-size: 12px; }
 
 .clothes-model .model-more,
 .clothes-model-sale .model-more {
@@ -463,10 +503,11 @@ main {
 .brands {
   border-bottom: solid 1px #d8d8d8;
   padding-bottom: 25px;
-  margin-top: 30px; }
+  margin-top: 15px; }
   .brands ul {
     display: flex;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-top: -20px; }
   .brands h2 {
     color: #414141;
     font-size: 15px;
@@ -493,14 +534,13 @@ main {
     background-position: 0px -350px;
     width: 125px; }
   .brands .edwin a::before {
-    background-position: 0px -420px; }
+    background-position: -15px -420px; }
   .brands .grenson a::before {
     background-position: 0px -490px;
     width: 150px; }
 
 .about-shop {
-  text-align: center;
-  margin-top: 20px; }
+  text-align: center; }
 
 button {
   background: #fd926d;
@@ -517,7 +557,7 @@ footer {
   background: #000;
   color: #bfbfbf;
   flex: 0 0 auto;
-  margin-top: 40px; }
+  margin-top: 25px; }
 
 .mob-footer {
   display: none; }
@@ -555,7 +595,7 @@ footer {
     display: block; }
 
 .footer-menu {
-  padding: 20px 15px;
+  padding: 25px 15px;
   font-size: 11px; }
   .footer-menu .copy {
     text-align: right; }
@@ -616,9 +656,11 @@ footer {
     .special-flex div:last-child {
       margin-right: 0; }
 
-@media screen and (max-width: 748px) {
-  .wrap-center {
-    margin: 0 15px; }
+@media screen and (max-width: 768px) {
+  .first-header {
+    margin-bottom: 20px; }
+  .second-header {
+    padding: 10px 0; }
   .fa-bars {
     color: #fff;
     font-size: 40px; }
@@ -627,7 +669,7 @@ footer {
   .mob-menu {
     display: block;
     background: #fd926d;
-    padding: 15px; }
+    padding: 5px 20px; }
     .mob-menu a {
       text-transform: uppercase;
       font-size: 18px;
@@ -657,12 +699,11 @@ footer {
     text-align: center;
     background: #fd926d; }
   .b-model {
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
     padding-left: 0px;
     flex: 3 30%; }
-    .b-model li {
-      margin-right: 0; }
   .special-flex {
     display: inline-block;
     margin-right: 0; }
@@ -758,10 +799,11 @@ footer {
     .second-header .right {
       align-self: center; }
   .form-cart {
-    margin: 70px 0 25px;
+    margin: 70px 0 40px;
     width: 100%; }
   .wrap-center {
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0; }
   .mob-row-column {
     flex-direction: column;
     align-items: inherit; }
@@ -778,7 +820,7 @@ footer {
       text-align: center; }
   .update-email-social {
     background: none;
-    margin: 0 15px; }
+    margin: 15px 0; }
     .update-email-social .fa-stack-1x {
       font-size: 40px;
       color: #6b6b6b; }
@@ -786,18 +828,18 @@ footer {
       width: 85px;
       height: 85px;
       line-height: 85px; }
-    .update-email-social ul {
-      float: none; }
   .b-model {
-    height: 515px;
     flex: 2 45%; }
+    .b-model li {
+      height: 520px; }
     .b-model img {
       width: 275px; }
     .b-model button {
       padding: 20px 20px;
       font-size: 20px; }
+  .b-tab {
+    padding: 40px 0; }
   .clothes-model .b-model {
-    flex-wrap: wrap;
     justify-content: space-around; }
   .clothes-model .model-more,
   .clothes-model-sale .model-more {
@@ -819,7 +861,7 @@ footer {
   .brands,
   .about-shop,
   .tabs-menu,
-  .your-cart,
+  .your-cart input,
   .email-text,
   .desk-footer {
     display: none; } }
